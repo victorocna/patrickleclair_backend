@@ -1,0 +1,24 @@
+{
+  "name": "patrickleclair_backend",
+  "version": "0.1.0",
+  "description": "Email API for patrickleclair.eu",
+  "main": "express/server.js",
+  "scripts": {
+    "build": "netlify-lambda build express",
+    "dev": "node server.dev.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.dev.js"
+  },
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "cors": "^2.8.5",
+    "dotenv": "^6.1.0",
+    "express": "^4.16.4",
+    "mustache": "^3.0.1",
+    "mustache-express": "^1.2.8",
+    "netlify-lambda": "^0.4.0",
+    "nodemailer": "^4.7.0",
+    "serverless-http": "^1.8.0"
+  },
+  "devDependencies": {}
+}
