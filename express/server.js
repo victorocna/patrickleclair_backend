@@ -33,6 +33,7 @@ app.post('/api/newcode', (request, response) => {
   if (!validNewCode(request)) {
     return response.sendStatus(400)
   }
+  
   // last chance to skip the mail sending
   if (skip(request)) {
     return response.sendStatus(204)
@@ -80,12 +81,12 @@ app.post('/api/unregister', (request, response) => {
 
 app.post('/api/newdetails', (request, response) => {
   if (!validNewDetails(request)) {
-    response.sendStatus(400).end()
+    return response.sendStatus(400)
   }
 
   // last chance to skip the mail sending
   if (skip(request)) {
-    return response.sendStatus(200).end()
+    return response.sendStatus(204)
   }
 
   let html1 = `<html>
