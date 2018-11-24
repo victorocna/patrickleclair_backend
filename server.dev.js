@@ -350,7 +350,7 @@ const validLog = (request) => {
 }
 
 const skip = (request) => {
-  return !!request.body.skip
+  return !!request.body.skip || !request.body.to
 }
 
 const PORT = process.env.PORT || 3000;

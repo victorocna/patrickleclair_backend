@@ -307,6 +307,7 @@ const validNewDetails = (request) => {
   return !!request.body.code && !!request.body.lastName &&
     typeof (request.body.mainGuest === 'object') && typeof (request.body.extraGuest === 'object')
 }
+
 const skip = (request) => {
-  return !!request.body.skip
+  return !!request.body.skip || !request.body.to
 }
